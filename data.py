@@ -31,15 +31,9 @@ class Data:
     # Returns new list without the already existing words in allWords list
     def checkDuplicate(self, pattern):
         newList = []
-        duplicate = False
-        for pat in pattern:
-            for word in self.allWords:
-                if pat == word:
-                    duplicate = True
-            if not duplicate:
-                newList.append(pat)
-            else:
-                duplicate = False
+        for word in pattern:
+            if word not in newList:
+                newList.append(word)
 
         return newList
 
