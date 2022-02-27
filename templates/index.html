@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="{{url_for('static', filename='js/script.js')}}"></script>
+  <title>Chatbot</title>
+  <meta charset="UTF-8">
+<head>
+<body>
+  <div class="wrapper">
+    <h1>Chatbot</h1>
+    <h2>Source: <a href="https://github.com/elac42/chatbot">Github</a></h2>
+    <div class="container-chatbot">
+      <div class="title">
+        ChatBot
+      </div>
+      <div class="chatbox" id="chat"></div>
+      <div class="inputbox">
+        <form>
+          <input type="text" id="msg" placeholder="Write something..">
+          <button type="submit" onclick="writeUserMsg()"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true" class="WAC__send-button-icon"><path d="M27.45,15.11l-22-11a1,1,0,0,0-1.08.12,1,1,0,0,0-.33,1L7,16,4,26.74A1,1,0,0,0,5,28a1,1,0,0,0,.45-.11l22-11a1,1,0,0,0,0-1.78Zm-20.9,10L8.76,17H18V15H8.76L6.55,6.89,24.76,16Z"></path></svg></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
