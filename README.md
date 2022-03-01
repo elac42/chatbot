@@ -7,3 +7,6 @@ All the training data comes from the intents.json file which contains different 
 # Input data example
 allWords = ["hi", "do", "day", "you", "how", "good", "know", "are"].
 If the user input string = "good day" the input tensor will look like following: [0, 0, 1, 0, 0, 1, 0, 0]. 
+
+# Before you run
+Make sure to have the following libraries installed: pytorch, flask and numpy.
