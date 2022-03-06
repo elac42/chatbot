@@ -16,5 +16,5 @@ class Net(nn.Module):
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
         x = self.fc3(x)
-
+        # Since we're using cross entropy loss we don't need to apply softmax to the output
         return x
