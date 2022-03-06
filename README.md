@@ -1,4 +1,4 @@
-# chatbot
+# Chatbot
 This chatbot uses a simple feed-forward network made in PyTorch in order to understand and process data. 
 
 # Training
