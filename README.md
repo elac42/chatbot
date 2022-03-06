@@ -8,5 +8,6 @@ All the training data comes from the intents.json file which contains different 
 allWords = ["hi", "do", "day", "you", "how", "good", "know", "are"].
 If the user input string = "good day" the input tensor will look like following: [0, 0, 1, 0, 0, 1, 0, 0]. 
 
-# Before you run
+# Before you try to run
 Make sure to have the following libraries installed: pytorch, flask and numpy.
+First run the train.py file to train the network and to save the parameters. Then you can run app.py to start the chatbot.
