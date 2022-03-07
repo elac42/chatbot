@@ -27,8 +27,7 @@ class Data:
 
         return words
 
-    # Function to check pattern contains word which is already in allWords list.
-    # Returns new list without the already existing words in allWords list
+    # Function that creates a new list without duplicates. Used on the allWords list. 
     def checkDuplicate(self, pattern):
         newList = []
         for word in pattern:
