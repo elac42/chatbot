@@ -75,7 +75,7 @@ if __name__ == '__main__':
     optimizer = optim.Adam(net.parameters(), lr=0.001)
 
     # Epochs. This is the amount of times that the network will see ALL data.
-    epochs = 15
+    epochs = 10
 
     print("Training network with", epochs, "epochs")
     for epoch in range(epochs):
