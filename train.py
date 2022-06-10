@@ -59,14 +59,14 @@ if __name__ == '__main__':
         deviceType = "cpu"
     print("Training on", deviceType)
 
+    # Input size (sequence length).
     input_size = data.inputSize()
+    # Amount of neurons in the hidden state. 
     hidden_size = 256
+    # Number of output classes.
     num_classes = data.outputSize()
     # Call on Net() and run it on device.
     net = Net(input_size, hidden_size, num_classes).to(device)
-
-    # Batch size. The number of samples shown to the network every time before making changes to weights
-    batch_size = 8
 
     # Loss function. Since this is a classification problem we use CrossEntropy Loss.
     criterion = nn.CrossEntropyLoss()
