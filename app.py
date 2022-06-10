@@ -13,13 +13,19 @@ else:
     device = torch.device("cpu")
 # Load pre-trained Model
 params = torch.load(savePath)
-net = Net().to(device)
+input_size = data.inputSize()
+hidden_size = 256
+num_classes = data.outputSize()
+# Call on Net() and run it on device.
+net = Net(input_size, hidden_size, num_classes).to(device)
 net.load_state_dict(params)
 net.eval()
 
 def chat(command):
+    hidden = torch.zeros(hidden_size).to(device)
     x = torch.from_numpy(np.array(data.convertData(command), dtype=np.float32)).to(device)
-    out = net(x)
+    for i in range(len(x)):
+        out, hidden = net(x[i], hidden)
     # Returns the index of the maximum value of the output layer
     _, predict = torch.max(out, dim=0)
     response = data.getResponse(int(predict.item()))

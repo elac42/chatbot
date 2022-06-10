@@ -51,13 +51,16 @@ class Data:
 
     # Returns list of 1's and 0's (input data) instead of words
     def convertData(self, command):
-        data = [0.0 for i in range(len(self.allWords))]
+        data = []
         tokenizedCommand = self.tokenize(command)
         for i in range(len(tokenizedCommand)):
+            sequence = [0.0 for i in range(len(self.allWords))]
             for j in range(len(self.allWords)):
                 # set data[j] to 1 if it contains allWords[i]
                 if tokenizedCommand[i] == self.allWords[j]:
-                    data[j] = 1.0
+                    sequence[j] = 1.0
+                    break
+            data.append(sequence)
 
         return data
 
