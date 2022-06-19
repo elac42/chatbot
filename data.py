@@ -11,10 +11,13 @@ class Data:
     # Function to tokenize string into words. Returns list of strings
     def tokenize(self, pattern):
         words = []
+        # List with punctuations and space which we want to ignore when tokenizing.
+        punctuation = [' ', '!', '?', ',', '.']
         pattern = pattern.lower()
         word = ""
         for i in range(len(pattern)):
-            if pattern[i] == ' ' or pattern[i] == "!" or pattern[i] == "?" or pattern[i] == ',':
+            # If the current character is a punctuation or a space we want to append the word to words[].
+            if pattern[i] in punctuation:
                 if len(word) != 0:
                     words.append(word)
                 word=""
